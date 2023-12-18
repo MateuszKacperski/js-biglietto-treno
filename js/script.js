@@ -49,4 +49,6 @@ prezzobiglietto = prezzobiglietto.toFixed(2);
 
 console.log(prezzobiglietto);
 
+
+//Stampo il prezzo finale del biglietto
 document.getElementById('result').innerText += prezzobiglietto + '€';
