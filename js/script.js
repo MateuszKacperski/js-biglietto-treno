@@ -42,3 +42,11 @@ if(eta <= 18){
 }else if(eta >= 65) {
     prezzobiglietto = prezzobiglietto - sconto40 ;
 }
+
+//Tolgo i decimali in piu
+prezzobiglietto = prezzobiglietto.toFixed(2);
+
+
+console.log(prezzobiglietto);
+
+document.getElementById('result').innerText += prezzobiglietto + '€';
