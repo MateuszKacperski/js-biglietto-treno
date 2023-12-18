@@ -4,7 +4,7 @@ console.log('JS OK');
 
 //Chiedere all'utente i chilometri da percorrere
 
-const chilometri = prompt('Quanti chilometri devi percorrere ?', '10');
+const chilometri = parseInt(prompt('Quanti chilometri devi percorrere ?', '10'));
 
 // Chidere all'utente la sua età
 
@@ -18,7 +18,7 @@ const perkm = 0.21 ;
 
 
 //calcolo il prezzo del biglietto
-const prezzobiglietto = chilometri * perkm ;
+let prezzobiglietto = chilometri * perkm ;
 
 console.log(prezzobiglietto);
 
@@ -35,3 +35,10 @@ const sconto40 = (40 * prezzobiglietto) / 100 ;
 console.log(sconto40);
 
 
+//Controllo se lo sconto va applicato
+
+if(eta <= 18){
+    prezzobiglietto = prezzobiglietto - sconto20 ;
+}else if(eta >= 65) {
+    prezzobiglietto = prezzobiglietto - sconto40 ;
+}
