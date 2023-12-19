@@ -12,6 +12,11 @@ const eta = parseInt(prompt('Quanti anni hai ?', '66'));
 
 console.log(chilometri, eta);
 
+//validazione
+
+if(isNaN(eta) || isNaN(chilometri) || eta <= 0 || chilometri <= 0){
+    alert('I dati inseriti non sono corretti');
+}
 
 //Creo costante prezzo biglietto per chilometro
 const perkm = 0.21 ;
@@ -37,9 +42,9 @@ console.log(sconto40);
 
 //Controllo se lo sconto va applicato
 
-if(eta <= 18){
+if(eta < 18){
     prezzobiglietto = prezzobiglietto - sconto20 ;
-}else if(eta >= 65) {
+}else if(eta > 65) {
     prezzobiglietto = prezzobiglietto - sconto40 ;
 }
 
